@@ -1,0 +1,1 @@
+This repository demonstrates a rare CSS bug involving an unexpected or invalid selector.  The bug causes elements to not be styled correctly because the browser cannot parse the selector. The solution shows how to correct the selector and ensure proper styling.
