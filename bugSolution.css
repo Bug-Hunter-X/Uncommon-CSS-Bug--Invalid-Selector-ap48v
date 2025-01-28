@@ -1,0 +1,28 @@
+/* Original code with the invalid selector */
+.element[data-attr=value'] { /* Invalid syntax due to unescaped single quote */
+  color: blue;
+}
+
+/* Corrected code with escaped single quote */
+.element[data-attr='value\''] {
+  color: blue;
+}
+
+/* Another example of an uncommon selector issue:
+   Incorrect use of the `:not` pseudo-class with invalid selectors. */
+.element:not(.class1 .class2) { /* This might not work as expected */
+  color: red; 
+}
+
+/* Corrected code using a more specific and reliable selector if possible */
+.element:not(.class1):not(.class2) { /* Better specificity */
+  color: red; 
+}
+
+or
+.element { /* use standard class selection for the element*/
+  color: red;
+}
+.class1 .element, .class2 .element {
+  color: blue;
+} 
